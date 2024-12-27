@@ -1,2 +1,454 @@
-# Project
-It is a project work
+#include<iostream>
+#include<cstring>
+
+using namespace std;
+class Register{
+    public:
+    char fn[50];
+    char ln[50];
+    Register(){
+        cout << "Execute any kind of program please register here\n";
+    }
+ 
+    void fun(){
+        do{
+        cout << "Enter your first name: ";
+        cin  >> fn;
+        cout << "Enter your last name: ";
+        cin >> ln;
+        cout << "Fullname: " << fn << " " << ln << endl;
+    
+    }while(strcmp(fn,ln)==0);
+ cout << "Successfully registered" << endl;
+}
+};
+
+void data(){
+    cout << "what do you want to do ?" << endl;
+    
+}
+
+
+void calculation()
+{
+    int n1,n2,select;
+    cout << "Enter the value of the two numbers( each number cout as a variable): " << endl;
+    cin >> n1;
+    cin >> n2;
+cout << "1.For addition: " << endl;
+cout << "2.For subtraction: " << endl;
+cout << "3.For multiplication: " << endl;
+cout << "4.Division: " << endl;
+cout << "5.Remainder after division: " << endl;
+cout << "Now enter wwhat you want: ";
+cin >> select;
+if(select==1){
+    cout << "Sum of two variable will  be: " << n1+n2 << endl;
+}
+else if(select==2){
+    cout << "for n2-n1 select 1 for n1-n2 select any thing" << endl;
+    int select2;
+    if(select2==1){
+        cout << "Subtraction(b-a):" << n2-n1 << endl;
+    }
+    else{
+        cout << "Subtraction(a-b):" << n1-n2 << endl;
+    }
+}
+ 
+ else if(select==3){
+    
+     cout << "Multiplication of two variable is: " << n1*n2 << endl;
+ }
+ else if(select==4){
+     cout << "For n1/n2 select 1 or n2/n1 select anything" << endl;
+     int select3;
+     cout << "Enter choice: ";
+     cin >> select3;
+     if(select3==1){
+         cout << "Division(n1/n2):" << n1/n2;
+     }
+     else{
+         cout << "Division(n2/n1):" << n2/n1;
+     }
+ }
+ 
+ else if(select==5){
+     cout << "For n1%n2 select 1 and n2%n1 select any thing:";
+     int select4;
+     cout << "Select now: ";
+     cin >> select4;
+     if(select==1){
+         cout << "Remainder(n1%n2)" << n1%n2 << endl;
+     }
+     else{
+          cout << "Remainder(n2%n1)" << n2%n1 << endl;
+     }
+ }
+ 
+ else {
+     cout << "Sorry terminated,try again:" << endl;
+ }
+}
+
+void shapes()
+{
+    int choice;
+    cout << "Select the shape name:" << endl;
+    cout << "1.Circle:" << endl;
+    cout << "2.Rectangle: " << endl;
+    cout << "3.Square: " << endl;
+    cout << "4.Sphere: " << endl;
+    cout << "5.Cube:" << endl;
+    cout << "6.Triangle:" << endl;
+    cout << "7.Cylinder: " << endl;
+     cout << "8.Cone: " << endl;
+    
+    cout << "Here we will use pie(π)=3.14" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    switch(choice){
+        case 1:
+        cout << " Shape-Circle:" << endl;
+          cout << "1. Perimeter of circle 2. Area of Circle " << endl;
+          int select;
+        cout << "Enter choice: ";
+        cin >> select;
+        int r;
+          cout << "Enter the radius of a circle: ";
+            cin >> r;
+        switch(select){
+            case 1:
+            cout << "Perimeter of the circle: " << endl;
+            cout << "Formula: 2*3.14*r" << endl;
+          cout << "Perimeter of the circle is: " << 2*3.14*r << endl;
+          break;
+          case 2:
+          cout << "Area of the circle: " << endl;
+            cout << "Formula: 3.14*r*r" << endl;
+           cout << "Area of the circle is: " << 3.14*r*r << endl;
+           break;
+           default:
+           cout << "Input invalid" << endl;
+        }
+        break;
+      
+      
+        case 2:
+          int select2;
+        int b,l;
+           cout << "Shape-Rectangle" << endl;
+        cout << "Enter length of a rectangle: ";
+        cin >> b;
+        cout << "Enter bredth of a rectangle:";
+        cin >> l;
+         cout << "1.Perimeter 2.Area" << endl;
+     cout << "Enter you choice: ";
+        cin >> select2;
+        switch(select2){
+            case 1:
+            cout << "Perimeter of the rectangle: " << endl;
+            cout << "Formula: 2*(l+b)" << endl;
+            cout << "Perimeter of the rectangle will be: " << 2*(l+b) << endl;
+            break;
+            case 2:
+            cout << "Area of a rectangle " << endl;
+            cout << "Formula: l*b" << endl;
+            cout << "Area of the rectangle is: " << l*b << endl; break;
+            default:
+            cout << "Input not valid" << endl;
+        }
+        break;
+        
+        case 3:
+        cout << "Shape-Square" << endl;
+        cout << "1.Area 2.Perimeter" << endl;
+        int select3;
+        cout << "Enter choice: ";
+        cin >> select3;
+        int s;
+        cout << "Enter a side of a square: ";
+        cin >> s;
+        if(select3==1){
+            cout << "Area of a square: " << endl;
+            cout << "Formula: 4*s";
+            cout << "Area of the square: " << 4*s << endl;
+        }
+        else if(select3==2){
+            cout << "Perimeter of a square: " << endl;
+            cout << "Formula: s*s";
+            cout << "Area of the square: " << s*s << endl;
+        }
+        else{
+            cout << "Terminated" << endl;
+        }
+        break;
+       
+       case 4:
+       int select4;
+       int r1;
+       
+       cout << "Shape-Sphere" << endl;
+       cout << "Enter the radius: " << endl;
+       cin >> r1;
+       
+       cout << "1.Perimeter 2.Area 3.Volume and for Diameter select any number" << endl;
+        cout << "Enter choice: ";
+        cin >> select4;
+        
+        if(select4==1){
+            cout << "Perimeter of the sphere: " << endl;
+            cout << "Fomula Applied: 2*3.14*r1" << endl;
+            cout << "Perimeter of the sphere: " << 2*3.14*r1 << endl;
+        }
+        
+        else if(select4==2){
+            cout << "Area of the sphere: " << endl;
+            cout << "Fomula Applied: 4*3.14*r1*r1" << endl;
+            cout << "Perimeter of the sphere: " << 4*3.14*r1*r1 << endl;
+        }
+        
+        else if(select4==3){
+            cout << "Volume of the sphere: " << endl;
+            cout << "Fomula Applied: 4/3*3.14r*r*r" << endl;
+            cout << "Perimeter of the sphere: " << 4/3*3.14*r1*r1*r1<< endl;
+        }
+        else {
+            cout << "Diameter of the sphere: " << endl;
+            cout << "Fomula Applied: 2*r" << endl;
+            cout << "Perimeter of the sphere: " << 2*r1 << endl;
+        }
+        break;
+        
+        case 5:
+        cout << "Shape-Cube" << endl;
+        int a;
+        cout << "Enter the side: ";
+        cin >> a;
+        int select5;
+        cout << "1.Perimeter 2.Area 3.Volume" << endl;
+        cout << "Enter choice:";
+        cin >> select5;
+       if(select5==1){
+           cout << "Perimeter of the cube: " << endl;
+           cout << "Formula: 12*a" << endl;
+           cout << "Perimeter of the cube is: " << 12*a << endl;
+       }
+       else if(select5==2){
+           cout << "Area of the cube: " << endl;
+           cout << "Fomula: 6*a*a" << endl;
+           cout << "Area of the cube is" << 6*a*a << endl;
+       }
+       else if(select5==3){
+           cout << "Volume of the cube: " << endl;
+           cout << "Formula: a*a*a" << endl;
+           cout << "Volume of the cube is: " << a*a*a << endl;
+       }
+       else{
+           cout << "Terminated" << endl;
+       }
+        break;
+ 
+ case 6:
+ int h,b2,s2,select6;
+ cout << "Shape-Triangle" << endl;
+ cout << "1.Area 2.perimeter" << endl;
+ cout << "Enter the base of the triangle: ";
+ cin >> b2;
+ cout << "Enter the height of the triangle: ";
+ cin >> h;
+ cout << "Enter the side of the triangle: ";
+ cin >> s2;
+ cout << "Select your choice: ";
+ cin >> choice;
+ 
+ if(select6==1)
+ {
+     cout << "The perimeter of the triangle:" << endl;
+     cout << "Formula: s2+b2+h" << endl;
+     cout << "Perimeter of the triangle: " << s2+b2+h << endl;
+ }
+  else if(select6==2)
+ {
+     cout << "The Area of the triangle:" << endl;
+     cout << "Formula: 1/2*b2*h" << endl;
+     cout << "Area of the triangle: " << 1/2*b2*h << endl;
+ }
+  else {
+      cout << "Terminated" << endl;
+  }
+ 
+break;
+case 7:
+
+int select7;
+cout << "Shape-Cylinder" << endl;
+cout << "1.Area 2.Perimeter 3.Volume" << endl;
+int r2,h1;
+cout << "Enter value of radius: ";
+cin >> r2;
+cout << "Enter value of height: ";
+cin >> h1;
+cout  << "Now what's you want to check select: ";
+cin >> select7;
+
+
+ if(select7==1){
+   cout << "Area of the cylinder(surface area): " << endl;
+   cout << "Formula:  2*3.14*r2*h1+2.14*r2*r2" << endl;
+cout << "Surface area of the cylinder: " << 2*3.14*r2*h1+2.14*r2*r2;
+ }
+ 
+ else if(select7==2){
+     cout << "Perimeter of the cylinder: " << endl;
+        cout << "Formula: 3.14*r+2*h" << endl;
+   cout << "Perimeter of the cylinder: " << 3.14*r2+2*h1;
+ }
+ else if(select7==3){
+      cout << "Volume of the cylinder: " << endl;
+        cout << "Formula: 3.14*r*r*h" << endl;
+   cout << "Volume of the cylinder: " << 3.14*r2*r2*h1;
+ }
+ else{
+     cout << "Try again,invalid input" << endl;
+ }
+ break;
+ case 8:
+ cout << "Shape-Cone" << endl;
+ cout << "1.Area 2.Volume 3.Surface area" << endl;
+ int l1,r3,h2;
+ cout << "Enter the value of radius: ";
+ cin >> r3;
+ cout << "Enter the value of height: ";
+ cin >> h2;
+ cout << "Enter the side-angle height: ";
+ cin >> l1;
+ int select8;
+ cout << "Choice selection:";
+ cin >> select8;
+ 
+ if(select8==1){
+     cout<< "Area of the cone: " << endl;
+     cout << "Formula: 3.14*r3*(l1+r3)" << endl;
+     cout << "Area of the cone: " << 3.14*r*(l1+r3);
+ }
+ else if(select8==2){
+     cout << "Volume of the cone: " << endl;
+     cout << "Formula: 1/3*3.14*r3*r3*h2" << endl;
+     cout << "Volume of the cone: " <<  1/3*3.14*r3*r3*h2;
+ }
+ else if(select8==3){
+      cout << "Surface area of the cone: " << endl;
+     cout << "Formula: 3.14*r3*l1+3.14*r3r3" << endl;
+     cout << "Volume of the cone: " << 3.14*r3*l1+3.14*r3*r3;
+ }
+ else{
+     cout << "Try later,invalid input" << endl;
+ }
+ break;
+ default:
+ cout << "Sorry input invalid,log out";
+    }
+}
+   
+   void unit(){
+       cout << "This a section of unit converter: " << endl;
+       cout << "Some basic knowledges: " << endl;
+       cout << "1.1Kilometer = 1000 meter" << endl;
+         cout << "2.1.Mile=1.5 kilometer" << endl;
+       cout << "3.1inch = 2.54 cm" << endl;
+       cout << "4.1foot = 60 inches" << endl;
+   }
+
+void calculations(){
+    int fact,i,num;
+    int choice;
+    bool prime=true;
+    cout << "1.Check even or odd number: " << endl;
+    cout << "2.Calculate factorial value: " << endl;
+    cout << "3.Check the number prime or not: " << endl;
+    cout << "Please enter your choice: ";
+    cin >> choice;
+  if(choice==1){
+      cout << "Check even or odd number" << endl;
+     cout << "Let's input a number: ";
+     cin >> num;
+     if(num%2==0){
+         cout << "The number is even," << num << endl;
+     }
+     else{
+         cout << "The number is not not even," << num;
+     }
+  }
+  else if(choice==2){
+      cout << "Calculate the factorial value of any number" << endl;
+      cout << "Input a number: ";
+      cin >> num;
+        fact=1;
+    for(i=1;i<=num;i++){
+        fact=fact*i;
+    }
+    cout << "Factorial of the number is," << fact;
+  }
+else if(choice==3){
+    cout << "Enter a number: ";
+    cin >> num;
+    cout << "Prime numbers are the only divided by itself and one" << endl;
+    if(num<=1){
+        prime==false;
+        cout << "The number is not prime";
+    }
+    else{
+        for(i=2;i<num;i++){
+            if(num%i==0)
+            prime=false;
+        }
+    }
+    
+    if(prime==true){
+        cout << "The number is prime";
+    }
+    cout << "Prime numbers are the only divided by itself and one:if it shows that means the number is not prime" << endl;
+}
+else{
+    cout << "Sorry try again" << endl;
+}
+}
+int main()
+
+{
+    Register r;
+    r.fun();
+      cout << "Hello, " << r.fn << " " << r.ln << endl;
+    cout << "If you want to do any kind of calculation this is the right place" << endl;
+    data();
+    unit();
+   int choice;
+    cout << "1.Arithmetic problems" << endl;
+    cout << "2. Solve the area and perameters" << endl;
+    cout << "3. Mathemetical Calculations" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    switch(choice){
+        case 1:
+        cout << "Arithmetic problems:" << endl;
+         calculation();
+        break;
+       case 2:
+        cout << "Solve the area and perameter of any geometric shape: " << endl;
+      shapes();
+        break;
+        case 3:
+        cout << "Mathematical Calculations: " << endl;
+        calculations();
+        break;
+        default:
+        cout << "Terminated ,try later" << endl;
+    }
+    char feedback[1000];
+    
+    cout << "Feedback:";
+    cin >> feedback;
+    cout << "Log out";
+    return 0;
+}
